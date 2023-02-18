@@ -1,0 +1,5 @@
+"0","library(dplyr)"
+"0","library(caret)"
+"0","# Encode categorical variables using dummyVars function"
+"0","formula <- as.formula(""FraudFound_P ~ ."")"
+"0","encoded_data <- predict(dummyVars(formula, data = Data), newdata = Data)"
