@@ -1,0 +1,24 @@
+"0","```r
+#========================================================
+# General-to-Specific Investigation
+# The case of EVI variable
+#========================================================
+ 
+print(\"Level Variable with Trend\")
+cbind(t(adf.trend$EVI@teststat), adf.trend$EVI@cval)
+
+print(\"Level Variable with Trend\")
+cbind(t(adf.trend$Precipitation@teststat), adf.trend$Precipitation@cval)
+
+print(\"Level Variable with Trend\")
+cbind(t(adf.trend$Evapiration@teststat), adf.trend$Evapiration@cval)
+
+print(\"Level Variable with Trend\")
+cbind(t(adf.trend$TempMin@teststat), adf.trend$TempMin@cval)
+
+print(\"Level Variable with Trend\")
+cbind(t(adf.trend$TempMax@teststat), adf.trend$TempMax@cval)
+
+print(\"Level Variable with Trend\")
+cbind(t(adf.trend$Drought@teststat), adf.trend$Drought@cval)
+```"

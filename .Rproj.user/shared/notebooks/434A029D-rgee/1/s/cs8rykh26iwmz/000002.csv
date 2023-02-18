@@ -1,0 +1,4 @@
+"0","```r
+# Creating a VAR model with vars
+Model1 <- VAR(TimeSeries,p= 8,lag.max = 12,season = NULL,  exogen = NULL,type = \"const\")
+```"

@@ -1,0 +1,10 @@
+"0","```r
+# Split into training and test sets ---------------------------------------
+
+library(rsample)
+Split <- initial_time_split(to_model,prop = 0.7,lag=12)
+train <- training(Split)
+test <- testing(Split)
+# Get the split date for the bias-free test set
+split_date <- min(test$dates) + 120
+```"

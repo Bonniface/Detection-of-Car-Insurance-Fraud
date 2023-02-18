@@ -1,0 +1,5 @@
+"0","```r
+fevd <- fevd(Model1)
+plot(fevd$EVI)
+
+```"

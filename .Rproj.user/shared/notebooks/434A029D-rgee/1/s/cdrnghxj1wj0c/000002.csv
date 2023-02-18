@@ -1,0 +1,7 @@
+"0","```r
+cc <- read_sf('Ghana shp file/ROI/new_roi.shp')
+aoi <- st_transform(cc, st_crs(4326))
+aoi.ee <- st_bbox(aoi) %>%
+  st_as_sfc() %>%
+  sf_as_ee() #Converts it to an Earth Engine Object
+```"

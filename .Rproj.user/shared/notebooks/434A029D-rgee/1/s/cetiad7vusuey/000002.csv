@@ -1,0 +1,4 @@
+"0","```r
+summary(adf.trend)
+summary(df.adf.trend)
+```"

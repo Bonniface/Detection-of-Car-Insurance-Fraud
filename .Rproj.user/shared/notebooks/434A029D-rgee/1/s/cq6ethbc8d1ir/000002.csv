@@ -1,0 +1,8 @@
+"0","```r
+tdx <- if(na.cnt > 0){imputeTS::na_kalman(tdx, model = \"auto.arima\", smooth = T)} else {
+    tdx
+}
+plot(tdx,pch = 16, frame = FALSE,
+     xlab = \"Time\", ylab = \"EVI \", col = \"#2E9FDF\")
+
+```"

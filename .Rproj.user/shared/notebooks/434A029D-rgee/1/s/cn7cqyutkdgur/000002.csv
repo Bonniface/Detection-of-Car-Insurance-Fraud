@@ -1,0 +1,21 @@
+"0","```r
+
+{
+Matrix <- diag(6)
+Matrix[2,1]<- NA
+Matrix[3,1]<- NA
+Matrix[4,1]<- NA
+Matrix[5,1]<- NA
+Matrix[6,1]<- NA
+Matrix[3,2]<- NA
+Matrix[4,2]<- NA
+Matrix[5,2]<- NA
+Matrix[6,2]<- NA
+Matrix[4,3]<- NA
+Matrix[5,3]<- NA
+Matrix[6,]<- NA
+Matrix[5,4]<- NA
+Matrix[6,4]<- NA
+Matrix[6,5]<- NA
+}
+```"

@@ -1,0 +1,6 @@
+"0","```r
+visdat::vis_dat(DATA)
+```"
+"1","Warning: `gather_()` was deprecated in tidyr 1.2.0.
+Please use `gather()` instead.
+"

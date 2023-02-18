@@ -1,0 +1,12 @@
+"0","```r
+# The Stationary Signal and ACF
+plot(Rt,col= \"red\", main = \"Stationary Signal\")
+acf(Rt, lag.max = length(Rt),
+    xlab = \"lag\", ylab = 'ACF', main = '')
+
+#The Trend Signal anf ACF
+
+plot(Tt,col= \"red\",main = \"Trend Signal\")
+acf(Tt, lag.max = length(Tt),
+    xlab = \"lag\", ylab = \"ACF\", main = '')
+```"

@@ -1,0 +1,20 @@
+"0","```r
+summary(DATA)
+```"
+"1","     date              mean_evi      Precipitation     Evapotranspiration  MiniTemperature
+ Length:264         Min.   :0.3945   Min.   : 0.1203   Min.   :1.682e-05   Min.   :194.0  
+ Class :character   1st Qu.:0.6439   1st Qu.: 2.0311   1st Qu.:3.583e-05   1st Qu.:220.7  
+ Mode  :character   Median :0.7262   Median : 3.5834   Median :4.214e-05   Median :225.8  
+                    Mean   :0.7192   Mean   : 3.9604   Mean   :4.031e-05   Mean   :225.4  
+                    3rd Qu.:0.8168   3rd Qu.: 5.4892   3rd Qu.:4.558e-05   3rd Qu.:231.0  
+                    Max.   :0.8672   Max.   :12.3576   Max.   :5.432e-05   Max.   :242.7  
+                    NA's   :147                                                           
+ MaxTemperature     Humidity           Drought        
+ Min.   :274.4   Min.   :0.009948   Min.   :-1354.42  
+ 1st Qu.:294.3   1st Qu.:0.015738   1st Qu.: -351.90  
+ Median :313.9   Median :0.016460   Median : -242.39  
+ Mean   :309.3   Mean   :0.016240   Mean   : -267.87  
+ 3rd Qu.:323.0   3rd Qu.:0.017229   3rd Qu.:  -97.42  
+ Max.   :348.2   Max.   :0.018595   Max.   :  369.64  
+                                                      
+"

@@ -1,0 +1,15 @@
+"0","```r
+skimr::skim_tee(DATA)
+```"
+"1","-- Data Summary ------------------------
+                           Values
+Name                       data  
+Number of rows             264   
+Number of columns          8     
+_______________________          
+Column type frequency:           
+  character                1     
+  numeric                  7     
+________________________         
+Group variables            None  
+"

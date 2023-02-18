@@ -1,0 +1,8 @@
+"0","```r
+plot(irf(Model1,impulse = \"EVI\",response = \"EVI\"))
+plot(irf(Model1,impulse = \"EVI\",response = \"Precipitation\"))
+plot(irf(Model1,impulse = \"EVI\",response = \"Evapiration\"))
+plot(irf(Model1,impulse = \"EVI\",response = \"TempMin\"))
+plot(irf(Model1,impulse = \"EVI\",response = \"TempMax\"))
+plot(irf(Model1,impulse = \"EVI\",response = \"Drought\"))
+```"

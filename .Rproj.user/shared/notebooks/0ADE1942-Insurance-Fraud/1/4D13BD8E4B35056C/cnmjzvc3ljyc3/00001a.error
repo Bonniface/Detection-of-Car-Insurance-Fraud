@@ -1,0 +1,1 @@
+{"frames":[],"message":"Error: unexpected ',' in:\n\"    scale_x_discrete(limits=c('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')) + \n    labs(title=\"Month\"),\"\n"}

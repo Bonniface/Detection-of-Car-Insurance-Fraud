@@ -1,0 +1,18 @@
+"0","```r
+accuracy(forecast(Model1),d=1, D= 1)
+```"
+"1","                                      ME         RMSE          MAE          MPE       MAPE      MASE
+EVI Training set           -1.002085e-17 2.665230e-01 2.100065e-01  52.68774014 281.011955 0.4707477
+Precipitation Training set -2.027363e-16 1.487304e+00 1.145718e+00 -29.21959658  55.669820 0.6034101
+Evapiration Training set    1.313189e-23 2.983419e-06 2.388808e-06  -0.75570798   6.455833 0.5794898
+TempMin Training set       -4.412003e-16 4.728847e+00 3.704853e+00  -0.04532638   1.653369 0.6426243
+TempMax Training set        1.990052e-15 4.901926e+00 3.768216e+00  -0.02485856   1.217722 0.7007125
+Drought Training set        2.928051e-15 1.005009e+02 6.327993e+01   7.71639505  58.966060 0.7289271
+                                   ACF1
+EVI Training set            0.005403068
+Precipitation Training set -0.047394642
+Evapiration Training set   -0.032622701
+TempMin Training set       -0.004616206
+TempMax Training set        0.001603613
+Drought Training set       -0.010350815
+"

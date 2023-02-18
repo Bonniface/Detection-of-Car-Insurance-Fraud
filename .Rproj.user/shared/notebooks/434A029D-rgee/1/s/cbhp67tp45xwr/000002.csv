@@ -1,0 +1,13 @@
+"0","```r
+dx$mean_evi <- NA
+tdx <- rbind(td, dx) %>% 
+  arrange(date)
+head(tdx)
+write.csv(tdx,\"Data/NDVI.csv\")
+na.cnt <- length(tdx[is.na(tdx)])
+evi.trend$na.cnt.2[i] <- na.cnt #add count of na values to dataframe
+rm(td, dx) #remove data we're no longer using, this is a good rule of thumb, especially when working with larger datasets.
+tdx <- ts(data = tdx$mean_evi, start = c(2000, 1), end = c(2022, 01), frequency = 12) #convert data to time series.
+plot(tdx,pch = 16, 
+     xlab = \"Time\", ylab = \"EVI \", col = \"#2E9FDF\")
+```"

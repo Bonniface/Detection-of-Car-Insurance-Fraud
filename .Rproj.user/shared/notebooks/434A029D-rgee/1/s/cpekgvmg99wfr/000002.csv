@@ -1,0 +1,12 @@
+"0","```r
+LagSelection <-VARselect(TimeSeries, 
+          type = \"const\", #type of deterministic regressors to include. We use none becasue the time series was made stationary using differencing above. 
+          lag.max = 12) #highest lag order
+LagSelection$selection
+```"
+"1","AIC(n)  HQ(n)  SC(n) FPE(n) 
+     8      4      2      6 
+"
+"0","```r
+kable(t(LagSelection$criteria))%>%kable_styling(latex_options = c(\"repeat_header\"))                #information criterion
+```"

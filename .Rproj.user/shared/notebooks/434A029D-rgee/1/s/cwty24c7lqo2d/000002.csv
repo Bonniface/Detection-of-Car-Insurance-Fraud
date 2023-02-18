@@ -1,0 +1,12 @@
+"0","```r
+# train_test_split <- 0.65
+# 
+# training <- to_model %>% 
+#   slice(1:I(nrow(to_model) 
+#             ))
+# 
+# test <- to_model %>% 
+#   slice(I(nrow(to_model) * train_test_split + 1):I(nrow(to_model) + 1))
+
+
+```"

@@ -1,0 +1,122 @@
+---
+title: "Cliam Fraud"
+author: "BonnyFace Kalong"
+date: "`r Sys.Date()`"
+output: pData_document
+---
+
+```{r}
+Data<-read.csv("./DataSet/fraud_oracle.csv")
+head(Data)
+```
+
+```{r}
+skimr::skim(Data)
+```
+```{r,warning=FALSE}
+# library(ggplot2)
+# library(gridExtra)
+# 
+# # Create a list of countplots
+# plots <- list(
+  ggplot(Data, aes(x=Month, fill=FraudFound_P)) + 
+    geom_bar(position="dodge") + 
+    scale_x_discrete(limits=c('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')) + 
+    labs(title="Month"),
+  
+  ggplot(Data, aes(x=DayOfWeek, fill=FraudFound_P)) + 
+    geom_bar(position="dodge") + 
+    scale_x_discrete(limits=c('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday')) + 
+    labs(title="Day"),
+  
+  ggplot(Data, aes(x=Sex, fill=FraudFound_P)) + 
+    geom_bar(position="dodge") + 
+    labs(title="Sex"),
+  
+  ggplot(Data, aes(x=MaritalStatus, fill=FraudFound_P)) + 
+    geom_bar(position="dodge") + 
+    labs(title="Marital Status"),
+  
+  ggplot(Data, aes(x=NumberOfCars, fill=FraudFound_P)) + 
+    geom_bar(position="dodge") + 
+    labs(title="Number Of Cars"),
+  
+  ggplot(Data, aes(x=AccidentArea, fill=FraudFound_P)) + 
+    geom_bar(position="dodge") + 
+    labs(title="Accident Area"),
+  
+  ggplot(Data, aes(x=DriverRating, fill=FraudFound_P)) + 
+    geom_bar(position="dodge") + 
+    labs(title="Driver Rating"),
+  
+  ggplot(Data, aes(x=AgentType, fill=FraudFound_P)) + 
+    geom_bar(position="dodge") + 
+    labs(title="Agent Type"),
+  
+  ggplot(Data, aes(x=BasePolicy, fill=FraudFound_P)) + 
+    geom_bar(position="dodge") + 
+    labs(title="Base Policy")
+# )
+# 
+# # Arrange the plots in a grid
+# grid.arrange(
+#   grobs = plots,
+#   ncol = 3,
+#   nrow = 3,
+#   top = "Countplots of Categorical Variables by Fraud Found",
+#   widths = c(10, 10, 10),
+#   heights = c(5, 5, 5)
+# )
+
+```
+```{r}
+library(ggplot2)
+library(gridExtra)
+df <- Data
+pdf("countplots.pdf", width = 15, height = 10)
+
+p1 <- ggplot(df, aes(x=Month, fill=FraudFound_P)) + 
+  geom_bar(position="dodge") + 
+  scale_x_discrete(limits=c('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')) + 
+  labs(title="Month")
+
+p2 <- ggplot(df, aes(x=DayOfWeek, fill=FraudFound_P)) + 
+  geom_bar(position="dodge") + 
+  scale_x_discrete(limits=c('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday')) + 
+  labs(title="Day")
+
+p3 <- ggplot(df, aes(x=Sex, fill=FraudFound_P)) + 
+  geom_bar(position="dodge") + 
+  labs(title="Sex")
+
+p4 <- ggplot(df, aes(x=MaritalStatus, fill=FraudFound_P)) + 
+  geom_bar(position="dodge") + 
+  labs(title="Marital Status")
+
+p5 <- ggplot(df, aes(x=NumberOfCars, fill=FraudFound_P)) + 
+  geom_bar(position="dodge") + 
+  labs(title="Number Of Cars")
+
+p6 <- ggplot(df, aes(x=AccidentArea, fill=FraudFound_P)) + 
+  geom_bar(position="dodge") + 
+  labs(title="Accident Area")
+
+p7 <- ggplot(df, aes(x=DriverRating, fill=FraudFound_P)) + 
+  geom_bar(position="dodge") + 
+  labs(title="Driver Rating")
+
+p8 <- ggplot(df, aes(x=AgentType, fill=FraudFound_P)) + 
+  geom_bar(position="dodge") + 
+  labs(title="Agent Type")
+
+p9 <- ggplot(df, aes(x=BasePolicy, fill=FraudFound_P)) + 
+  geom_bar(position="dodge") + 
+  labs(title="Base Policy")
+
+grid.arrange(p1, p2, p3, p4, p5, p6, p7, p8, p9, ncol=3, nrow=3, top="Countplots of Categorical Variables by Fraud Found")
+
+dev.off()
+
+```
+```
+

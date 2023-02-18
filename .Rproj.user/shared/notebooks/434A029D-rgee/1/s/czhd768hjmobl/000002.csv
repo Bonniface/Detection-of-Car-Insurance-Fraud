@@ -1,0 +1,20 @@
+"0","```r
+# Plot the models ---------------------------------------------------------
+
+# Make forecasts
+fcasts <- models %>% forecast(test)
+
+# Calculate accuracies for the test set
+# rbind training set to get MASE calculations
+accuracies <- fcasts %>% accuracy(rbind(training,
+                                        test %>% filter(dates >= split_date)))
+
+# Calculate R-squareds, NA if near-zero variance
+accuracies <- accuracies %>% 
+  inner_join(fcasts %>% 
+               as_tibble() %>% 
+               group_by(.model) %>% 
+               summarise(rsq = ifelse(sd(tenyear) > 0.01,
+                                      cor(tenyear, test$tenyear)^2,
+                                      NA)))
+```"

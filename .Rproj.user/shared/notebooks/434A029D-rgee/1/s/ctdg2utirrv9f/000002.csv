@@ -1,0 +1,6 @@
+"0","```r
+ee_check()
+
+ee_Initialize(\"kalong\",drive = TRUE) # initialize GEE,
+#this will have you log in to Google Drive
+```"

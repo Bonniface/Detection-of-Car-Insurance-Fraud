@@ -1,0 +1,7 @@
+"0","```r
+DATA <- DATA%>%
+dplyr::select(Date,Drought, TempMin, Precipitation, TempMax, Evapiration,EVI)
+
+colnames(DATA)
+head(DATA)
+```"

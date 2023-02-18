@@ -1,0 +1,8 @@
+"0","{
+# cc.evi <- ee_extract(x = modis.evi, y = hex[\"hex_id\"], sf = FALSE, scale = 250, fun = ee$Reducer$mean(), via = \"drive\", quiet = T)
+# evi.df <- as.data.frame(cc.evi)
+# write.csv(x = evi.df, file = \"Data/rgeedf.csv\")
+}
+
+cc.evi = evi.df <-read.csv(\"Data/rgeedf.csv\")
+colnames(evi.df) <- c('hex_id', stringr::str_replace_all(substr(colnames(evi.df[, 2:ncol(evi.df)]), 2, 11), \"_\", \"-\"))"

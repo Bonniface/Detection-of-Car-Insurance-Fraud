@@ -1,0 +1,8 @@
+"0","```r
+data <- DATA%>%select(Date,Drought, TempMin, Precipitation, TempMax, Evapiration,EVI)
+# Make a tsibble for modeling
+to_model <- data %>% 
+  mutate(dates = yearmonth(paste0(Date, \"-01\"))) %>% 
+  as_tibble() %>% 
+  as_tsibble()
+```"

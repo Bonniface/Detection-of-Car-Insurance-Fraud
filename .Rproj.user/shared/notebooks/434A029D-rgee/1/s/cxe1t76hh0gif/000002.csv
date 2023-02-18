@@ -1,0 +1,34 @@
+"0","```r
+df<- DATA%>%select(-Date)
+# 1st differenced data
+# df <- as.data.frame(diff(as.matrix(DATA), lag = 1))
+#========================================================
+# Summary of ADF test of level variables
+#========================================================
+ 
+adf.none  <- list(
+    EVI = ur.df(DATA$EVI, type='none', selectlags = c(\"BIC\")),
+    Precipitation = ur.df(DATA$Precipitation, type='none', selectlags = c(\"BIC\")),
+    Evapiration = ur.df(DATA$Evapiration, type='none', selectlags = c(\"BIC\")),
+    TempMin = ur.df(DATA$TempMin, type='none', selectlags = c(\"BIC\")),
+    TempMax = ur.df(DATA$TempMax, type='none', selectlags = c(\"BIC\")),
+    Drought = ur.df(DATA$Drought, type='none', selectlags = c(\"BIC\"))
+    )
+adf.drift  <- list(
+    EVI = ur.df(DATA$EVI, type='drift', selectlags = c(\"BIC\")),
+    Precipitation = ur.df(DATA$Precipitation, type='drift', selectlags = c(\"BIC\")),
+    Evapiration = ur.df(DATA$Evapiration, type='drift', selectlags = c(\"BIC\")),
+    TempMin = ur.df(DATA$TempMin, type='drift', selectlags = c(\"BIC\")),
+    TempMax = ur.df(DATA$TempMax, type='drift', selectlags = c(\"BIC\")),
+    Drought = ur.df(DATA$Drought, type='drift', selectlags = c(\"BIC\"))
+    )
+adf.trend  <- list(
+    EVI = ur.df(DATA$EVI, type='trend', selectlags = c(\"BIC\")),
+    Precipitation = ur.df(DATA$Precipitation, type='trend', selectlags = c(\"BIC\")),
+    Evapiration = ur.df(DATA$Evapiration, type='trend', selectlags = c(\"BIC\")),
+    TempMin = ur.df(DATA$TempMin, type='trend', selectlags = c(\"BIC\")),
+    TempMax = ur.df(DATA$TempMax, type='trend', selectlags = c(\"BIC\")),
+    Drought = ur.df(DATA$Drought, type='trend', selectlags = c(\"BIC\"))
+    )
+
+```"

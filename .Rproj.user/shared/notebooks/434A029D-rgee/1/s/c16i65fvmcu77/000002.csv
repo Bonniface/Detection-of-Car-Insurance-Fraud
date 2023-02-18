@@ -1,0 +1,8 @@
+"0","```r
+Tt <- trendcycle(tdx.dcp)
+St <- seasonal(tdx.dcp)
+Rt <- remainder(tdx.dcp)
+plot(Rt)
+plot(Tt)
+plot(St)
+```"

@@ -1,0 +1,10 @@
+"0","```r
+DATA$EVI <- if(is.na(DATA$EVI) > 0){imputeTS::na_kalman(DATA$EVI, model = \"auto.arima\", smooth = T)} else {
+    DATA$EVI
+}
+```"
+"1","Warning: the condition has length > 1 and only the first element will be used
+"
+"0","```r
+head(DATA)
+```"

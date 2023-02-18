@@ -1,0 +1,4 @@
+"0","```r
+colnames(DATA)<- c(\"Date\",\"EVI\",\"Precipitation\",\"Evapiration\",\"TempMin\",\"TempMax\",\"Humidity\",\"Drought\")
+plot(corr_coef(DATA))
+```"

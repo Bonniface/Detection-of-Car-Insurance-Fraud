@@ -1,0 +1,22 @@
+"0","```r
+getQABits <- function(image, qa) {
+  # Convert binary (character) to decimal (little endian)
+  qa <- sum(2^(which(rev(unlist(strsplit(as.character(qa), \"\")) == 1))-1))
+  # Return a mask band image, giving the qa value.
+  image$bitwiseAnd(qa)$lt(1)
+}
+
+mod.clean <- function(img) {
+  # Extract the NDVI band
+  ndvi_values <- img$select(\"NDVI\")
+  # Extract the quality band
+  ndvi_qa <- img$select(\"SummaryQA\")
+  # Select pixels to mask
+  quality_mask <- getQABits(ndvi_qa, \"11\")
+  # Mask pixels with value zero.
+  ndvi_values$updateMask(quality_mask)$divide(ee$Image$constant(10000)) #0.0001 is the MODIS Scale Factor
+}
+Date <- Sys.Date()
+
+modis.evi <- ee$ImageCollection(\"MODIS/006/MOD13Q1\")$filter(ee$Filter$date('2000-01-01',rdate_to_eedate(Date)))$map(mod.clean)
+```"

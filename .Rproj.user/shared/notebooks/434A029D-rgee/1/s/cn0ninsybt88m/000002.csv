@@ -1,0 +1,9 @@
+"0","```r
+EVI <- ts(data = DATA$EVI, start = c(2000, 1), end = c(2022, 01), frequency = 12)
+Precipitation <- ts(data = DATA$Precipitation, start = c(2000, 1), end = c(2022, 01), frequency = 12)
+Evapiration <- ts(data = DATA$Evapiration, start = c(2000, 1), end = c(2022, 01), frequency = 12)
+TempMin <- ts(data = DATA$TempMin, start = c(2000, 1), end = c(2022, 01), frequency = 12)
+TempMax <- ts(data = DATA$TempMax, start = c(2000, 1), end = c(2022, 01), frequency = 12)
+Drought <- ts(data = DATA$Drought, start = c(2000, 1), end = c(2022, 01), frequency = 12)
+TimeSeries <- cbind(EVI,Precipitation,Evapiration,TempMin,TempMax,Drought)
+```"

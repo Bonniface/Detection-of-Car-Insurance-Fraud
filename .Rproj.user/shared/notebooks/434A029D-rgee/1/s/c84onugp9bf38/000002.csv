@@ -1,0 +1,9 @@
+"0","```r
+library(classInt)
+trend_brks <- classIntervals(hex_trend$trend, n=11, style = \"fisher\")
+colorscheme <- RColorBrewer::brewer.pal(n = 11, 'RdYlGn')
+palette_sds <- leaflet::colorBin(colorscheme, domain = hex_trend$trend, bins=trend_brks$brks, na.color = \"#ffffff\", pretty = T)
+
+pop <- paste0(\"<b> Hex ID: </b>\",hex_trend$hex_id,\"<br><b>NA Count: </b>\",hex_trend$na.cnt+hex_trend$na.cnt.2,\"<br><b>Trend: </b>\",format(round(hex_trend$trend, 4), scientific = FALSE),\"<br><b> P-Value: </b>\",round(hex_trend$p.val, 4),\"<br><b>R2: </b>\",round(hex_trend$r2, 4),\"<br><b>Std Err: </b>\",round(hex_trend$std.er, 4),\"<br><b>Trend Strength: </b>\",round(hex_trend$trnd.strngth, 2),\"<br><b>Seasonal Strength: </b>\",round(hex_trend$seas.strngth, 4),\"<br>\")
+#Here we're creating a popup for our interactive map.
+```"

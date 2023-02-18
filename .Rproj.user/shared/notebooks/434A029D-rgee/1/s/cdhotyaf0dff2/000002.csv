@@ -1,0 +1,21 @@
+"0","```r
+{
+  evi.hw.lst <- list() #Create an empty list, this will be used to house the time series projections for each cell. 
+evi.dcmp.lst <- list() #Create an empty list, this will be used to house the time series decomposition for each cell.
+evi.df<-evi.df[,-2]
+evi.trend <- data.frame(hex_id = evi.df$hex_id, na.cnt = NA, na.cnt.2 = NA, trend = NA, p.val = NA, r2 = NA, std.er = NA, trnd.strngth = NA, seas.strngth = NA) #This data frame will hold the trend data
+Dates <- data.frame(date = seq(as.Date('2000-01-01'), Date, \"month\"))
+Dates$month <- month(Dates$date)
+Dates$year <- year(Dates$date)
+i <- 1
+}
+tsv <- data.frame(evi = t(evi.df[i, 2:ncol(evi.df)])) #converting the data to a transposed data frame
+colnames(tsv) <- c(\"evi\")
+# 
+# write.csv(tsv,\"Data/tsv.csv\")
+# tsv <- read.csv(\"Data/tsv.csv\")
+# tsv<-tsv[!(tsv$X==\"ex-id\"),]
+# tsv$X <- as.Date(tsv$X,tryFormats = c(\"%Y-%m-%d\", \"%Y/%m/%d\"))
+
+head(tsv) #let's take a look
+```"

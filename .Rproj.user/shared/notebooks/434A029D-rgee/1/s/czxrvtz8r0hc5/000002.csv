@@ -1,0 +1,9 @@
+"0","```r
+evi.trend$trend[i] <- trend.summ$coefficients[2,1]
+evi.trend$trnd.strngth[i] <- round(max(0,1 - (var(Rt)/var(Tt + Rt))), 1) #Trend Strength Calculation <https://towardsdatascience.com/rainfall-time-series-analysis-and-forecasting-87a29316494e>
+evi.trend$seas.strngth[i] <- round(max(0,1 - (var(Rt)/var(St + Rt))), 1) #Seasonal Strength Calculation
+evi.trend$p.val[i] <- trend.summ$coefficients[2,4]
+evi.trend$r2[i] <- trend.summ$r.squared
+evi.trend$std.er[i] <- trend.summ$sigma
+evi.trend[i,]
+```"

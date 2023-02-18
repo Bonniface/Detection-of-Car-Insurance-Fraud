@@ -1,0 +1,6 @@
+"0","```r
+DATA$EVI <- if(is.na(DATA$EVI) > 0){imputeTS::na_kalman(DATA$EVI, model = \"auto.arima\", smooth = T)} else {
+    DATA$EVI
+}
+head(DATA)
+```"

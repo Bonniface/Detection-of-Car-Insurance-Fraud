@@ -1,0 +1,4 @@
+"0","```r
+tdx.dcp <- stl(tdx, s.window = 'periodic')
+plot(tdx.dcp,pch = 16, frame = FALSE, col = \"#2E9FDF\")
+```"

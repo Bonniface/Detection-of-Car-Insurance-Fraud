@@ -1,0 +1,8 @@
+"0","```r
+cc.proj <- st_transform(cc, st_crs(2992))
+hex <- st_make_grid(x = cc.proj, cellsize = 17080, square = FALSE) %>%
+st_sf() %>%
+rowid_to_column('hex_id')
+hex <- hex[cc.proj,]
+plot(hex)
+```"

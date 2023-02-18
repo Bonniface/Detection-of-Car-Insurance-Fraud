@@ -1,0 +1,12 @@
+"0","```r
+
+na.cnt <- length(tsv[is.na(tsv)]) #We want to get an idea of the number of entries with no EVI value
+evi.trend$na.cnt[i] <- na.cnt
+td <- tsv %>% 
+  mutate(month = month(as.Date(rownames(tsv))), year = year(as.Date(rownames(tsv)))) %>% 
+  group_by(year, month) %>%
+  summarise(mean_evi = mean(evi, na.rm = T), .groups = \"keep\") %>%
+  as.data.frame()
+write.csv(td,\"Data/td.csv\")
+head(td)
+```"

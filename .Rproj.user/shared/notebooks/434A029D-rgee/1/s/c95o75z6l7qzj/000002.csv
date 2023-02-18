@@ -1,0 +1,9 @@
+"0","```r
+# library(ggdensity)
+# ggdensity(evi.trend, x = \"trend\", 
+#           fill = \"#0073C2FF\", 
+#           color = \"#0073C2FF\",
+#           add = \"mean\", 
+#           rug = TRUE)
+write.csv(evi.trend,\"Data/evi.trend.csv\")
+```"

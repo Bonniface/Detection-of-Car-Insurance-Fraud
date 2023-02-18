@@ -1,0 +1,7 @@
+"0","```r
+grangertest(EVI~Precipitation, order = 12)
+grangertest(EVI~TempMin, order = 12)
+grangertest(EVI~TempMax, order = 12)
+grangertest(EVI~Evapiration, order = 12)
+grangertest(EVI~Drought, order = 12)
+```"

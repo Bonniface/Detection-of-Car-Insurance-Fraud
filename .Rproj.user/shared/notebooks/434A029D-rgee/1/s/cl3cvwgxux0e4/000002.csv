@@ -1,0 +1,19 @@
+"0","```r
+# Train models ------------------------------------------------------------
+
+# Different formulas for arima and rest of the models
+
+
+f_mc <- as.formula(\"EVI~Drought+ TempMin+ Precipitation+ TempMax+ Evapiration\")
+
+# Train six models plus make a combination
+models <- train %>% 
+  model(ARIMA = ARIMA(f_mc, stepwise = FALSE),
+        nnetar = NNETAR(f_mc),
+        VAR = VAR(f_mc),
+        Prophet = prophet(f_mc),
+        ETS = ETS(EVI),
+        TSLM = TSLM(EVI~Drought+ TempMin+ Precipitation+ TempMax+ Evapiration+
+                      trend() + season())) %>% 
+  mutate(Combination = (ARIMA + nnetar + VAR + Prophet + TSLM) / 5)
+```"

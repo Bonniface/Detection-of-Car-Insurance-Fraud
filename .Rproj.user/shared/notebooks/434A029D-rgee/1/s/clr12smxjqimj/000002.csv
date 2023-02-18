@@ -1,0 +1,5 @@
+"0","```r
+win.graph(width=13,height=8)
+layout(matrix(1:6,ncol=1))
+plot.varfevd(fevd(Model2, n.ahead = 10 ),plot.type = \"multiple\", col=1:6)
+```"

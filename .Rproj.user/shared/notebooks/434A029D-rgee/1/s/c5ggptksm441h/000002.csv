@@ -1,0 +1,5 @@
+"0","```r
+library(vars)
+colnames(TimeSeries) <-c(\"EVI\",\"Prep\",\"Evap\",\"TMin\",\"TMax\",\"Drght\")
+Model2 <- VAR(TimeSeries,p= 8,lag.max = 12,season = NULL,  exogen = NULL,type = \"const\")
+```"

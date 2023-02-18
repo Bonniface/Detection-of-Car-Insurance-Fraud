@@ -1,0 +1,10 @@
+"0","```r
+tdx.ns <- data.frame(time = c(1:length(tdx)), trend = tdx - tdx.dcp$time.series[,1])
+Tt <- trendcycle(tdx.dcp)
+St <- seasonal(tdx.dcp)
+Rt <- remainder(tdx.dcp)
+trend.summ <- summary(lm(formula = trend ~ time, data = tdx.ns)) #tslm
+plot(tdx.ns,pch = 16, 
+     xlab = \"Time\", ylab = \"Trend \", col = \"#2E9FDF\")
+abline(a = trend.summ$coefficients[1,1], b = trend.summ$coefficients[2,1], col='red')
+```"

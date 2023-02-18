@@ -1,0 +1,6 @@
+"0","```r
+DATA <- read.csv(\"Data/Data.csv\")%>%
+  dplyr::select(date,mean_evi,Precipitation,Evapotranspiration,
+                MiniTemperature,MaxTemperature,Humidity,Drought)
+head(DATA)
+```"
