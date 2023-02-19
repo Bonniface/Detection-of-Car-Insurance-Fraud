@@ -1,0 +1,2 @@
+"0","# Normalize numerical variables (excluding target variable)"
+"0","preprocessParams <- preProcess(Data, method = ""BoxCox"") #BoxCox: Remove skewness leading to normality. Values must be > 0"

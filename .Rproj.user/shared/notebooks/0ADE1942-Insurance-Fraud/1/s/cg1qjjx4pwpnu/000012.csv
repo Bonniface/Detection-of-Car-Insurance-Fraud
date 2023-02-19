@@ -1,0 +1,28 @@
+"0","library(skimr)"
+"0","skimmed <- skim_to_wide(Data)"
+"2","Warning: 'skim_to_wide' is deprecated.
+Use 'skim()' instead.
+See help(""Deprecated"")"
+"0","skimmed[, c(1:5, 9:11, 13, 15:16)]"
+"1","── Data Summary ────────────────────────
+"
+"1","                           Values    
+"
+"1","Name                       Piped data
+"
+"1","Number of rows             15420     
+"
+"1","Number of columns          33        
+"
+"1","_______________________              
+"
+"1","Column type frequency:               
+"
+"1","  character                24        
+"
+"1","  numeric                  9         
+"
+"1","________________________             
+"
+"1","Group variables            None      
+"

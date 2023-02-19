@@ -1,2 +1,0 @@
-"0","Data<-read.csv(""./DataSet/fraud_oracle.csv"")"
-"0","head(Data)"

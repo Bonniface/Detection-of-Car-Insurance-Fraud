@@ -1,5 +1,0 @@
-"0",""
-"0","Data$FraudFound_P <- factor(df$target, levels = c(0, 1))"
-"2","Error in `$<-.data.frame`(`*tmp*`, FraudFound_P, value = integer(0)) : 
-  replacement has 0 rows, data has 15420
-"

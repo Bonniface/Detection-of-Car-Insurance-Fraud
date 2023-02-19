@@ -1,0 +1,8 @@
+"0","# Split data into training, validation, and testing sets"
+"0","set.seed(123)  # for reproducibility"
+"0","inTrain <- createDataPartition(Data$FraudFound_P, p = 0.7, list = FALSE)"
+"0","training <- Data[inTrain, ]"
+"0","remaining <- Data[-inTrain, ]"
+"0","inTest <- createDataPartition(remaining$FraudFound_P, p = 0.5, list = FALSE)"
+"0","validation <- remaining[inTest, ]"
+"0","testing <- remaining[-inTest, ]"

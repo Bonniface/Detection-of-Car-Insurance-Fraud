@@ -1,5 +1,2 @@
-"0","library(dplyr)"
-"0","library(caret)"
-"0","# Encode categorical variables using dummyVars function"
-"0","formula <- as.formula(""FraudFound_P ~ ."")"
-"0","encoded_data <- predict(dummyVars(formula, data = Data), newdata = Data)"
+"0","# Normalize numerical variables (excluding target variable)"
+"0","preprocessParams <- preProcess(Data, method = ""BoxCox"") #BoxCox: Remove skewness leading to normality. Values must be > 0"

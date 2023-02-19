@@ -1,0 +1,2 @@
+"0","# Plot the feature importance"
+"0","xgb.importance(model = model1$finalModel) "
