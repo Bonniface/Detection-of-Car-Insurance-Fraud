@@ -1,0 +1,3 @@
+"0","ggplot(Data, aes(x=Data$FraudFound_P)) + "
+"0","    geom_bar(position=""dodge"") + "
+"0","    labs(title=""Agent Type"")"

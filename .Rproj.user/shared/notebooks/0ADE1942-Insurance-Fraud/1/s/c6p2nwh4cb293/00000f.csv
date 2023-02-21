@@ -1,0 +1,5 @@
+"0","formula <- as.formula(""FraudFound_P ~ ."")"
+"0","Data$FraudFound_P <- factor(ifelse(Data$FraudFound_P == 0,1)) "
+"2","Error in ifelse(Data$FraudFound_P == 0, 1) : 
+  argument ""no"" is missing, with no default
+"

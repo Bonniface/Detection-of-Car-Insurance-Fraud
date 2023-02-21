@@ -1,0 +1,27 @@
+{
+    "id": "F899617C",
+    "path": "~/Github/Detection-of-Car-Insurance-Fraud/Insurance-Fraud.Rmd",
+    "project_path": "Insurance-Fraud.Rmd",
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1676715663459.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "tempName": "Untitled2",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "427,0",
+        "scrollLine": "416"
+    },
+    "folds": "192|6|209|0|\n216|6|220|0|\n",
+    "lastKnownWriteTime": 1676941586,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1676941589603,
+    "read_only": false,
+    "read_only_alternatives": []
+}

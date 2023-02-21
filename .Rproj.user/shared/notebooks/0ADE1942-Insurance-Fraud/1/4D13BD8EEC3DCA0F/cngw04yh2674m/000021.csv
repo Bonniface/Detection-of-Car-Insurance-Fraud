@@ -1,0 +1,5 @@
+"0","# Define the SMOTE sampling strategy
+smote <- SMOTE(as.factor(FraudFound )~ ., data = training, perc.over = 100, k = 5)
+"
+"2","Error in T[i, ] : subscript out of bounds
+"

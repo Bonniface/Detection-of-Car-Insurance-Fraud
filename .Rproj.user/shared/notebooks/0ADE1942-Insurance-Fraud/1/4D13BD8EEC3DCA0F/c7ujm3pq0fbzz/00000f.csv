@@ -1,0 +1,49 @@
+"0","library(metan)"
+"2","Registered S3 method overwritten by 'GGally':
+  method from   
+  +.gg   ggplot2
+"
+"2","|=========================================================|
+"
+"2","| Multi-Environment Trial Analysis (metan) v1.17.0        |
+"
+"2","| Author: Tiago Olivoto                                   |
+"
+"2","| Type 'citation('metan')' to know how to cite metan      |
+"
+"2","| Type 'vignette('metan_start')' for a short tutorial     |
+"
+"2","| Visit 'https://bit.ly/pkgmetan' for a complete tutorial |
+"
+"2","|=========================================================|
+"
+"2","
+Attaching package: ‘metan’
+
+"
+"2","The following object is masked from ‘package:forcats’:
+
+    as_factor
+
+"
+"2","The following object is masked from ‘package:dplyr’:
+
+    recode_factor
+
+"
+"2","The following object is masked from ‘package:tidyr’:
+
+    replace_na
+
+"
+"2","The following objects are masked from ‘package:tibble’:
+
+    column_to_rownames, remove_rownames, rownames_to_column
+
+"
+"2","The following objects are masked from ‘package:skimr’:
+
+    n_missing, n_unique
+
+"
+"0","plot(corr_coef(Data))"
